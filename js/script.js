@@ -44,7 +44,9 @@ var app = new Vue(
         // funzioni da far partire al caricamento della pagina
         created() {
 
-            setInterval(this.prossimaImg, 3000);
+            setInterval(() => {
+                this.prossimaImg();
+            }, 3000);
             
         }
     }
