@@ -1,6 +1,7 @@
 var app = new Vue(
     {
         el: "#root",
+
         data: {
             indiceImgCorrente: 0,
             arrayImmagini: [
@@ -10,7 +11,9 @@ var app = new Vue(
                 "montagne.webp"
             ],
         },
+
         methods: {
+
             prossimaImg() {
 
                 const indiceProsImg = this.indiceImgCorrente + 1;
@@ -20,7 +23,6 @@ var app = new Vue(
                 } else {
                     this.indiceImgCorrente = indiceProsImg;
                 }
-
             },
 
             precedenteImg() {
@@ -32,9 +34,13 @@ var app = new Vue(
                 } else {
                     this.indiceImgCorrente = indicePrecImg;
                 }
-
             }
+        },
+
+        created() {
+
+            setInterval(this.prossimaImg, 3000);
+            
         }
-        
     }
 );
