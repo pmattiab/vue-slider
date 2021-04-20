@@ -36,17 +36,17 @@
                 <div class="carousel">
 
                     <!-- freccia sinistra -->
-                    <div class="freccia sinistra">
+                    <div class="freccia sinistra" @click="precedenteImg">
                         <i class="fas fa-arrow-circle-left"></i>
                     </div>
 
                     <!-- immagini dello slider -->
                     <div class="img_cont">
-                        <img :src="immagini[imgCorrente]" alt="">
+                        <img :src="'img/' + arrayImmagini[indiceImgCorrente]" alt="">
                     </div>
 
                     <!-- freccia destra -->
-                    <div class="freccia destra">
+                    <div class="freccia destra" @click="prossimaImg">
                         <i class="fas fa-arrow-circle-right"></i>
                     </div>
 
@@ -55,8 +55,8 @@
 
                 <!-- cerchietti -->
                 <div class="cerchietti">
-                    <span v-for="(immagine, index) in immagini" class="cerchietto">
-                        <i class="fas fa-circle" :class="{'attivo': index == imgCorrente}"></i>
+                    <span v-for="(immagine, index) in arrayImmagini" class="cerchietto">
+                        <i class="fas fa-circle" :class="{'attivo': index == indiceImgCorrente}"></i>
                     </span>
                 </div>
 

@@ -2,16 +2,38 @@ var app = new Vue(
     {
         el: "#root",
         data: {
-            imgCorrente: 0,
-            immagini: [
-                "img/campagna.jpg",
-                "img/cascate.webp",
-                "img/fiori.jpeg",
-                "img/montagne.webp"
-            ]
+            indiceImgCorrente: 0,
+            arrayImmagini: [
+                "campagna.jpg",
+                "cascate.webp",
+                "fiori.jpeg",
+                "montagne.webp"
+            ],
         },
         methods: {
+            prossimaImg() {
 
+                const indiceProsImg = this.indiceImgCorrente + 1;
+
+                if (indiceProsImg == this.arrayImmagini.length) {
+                    this.indiceImgCorrente = 0;
+                } else {
+                    this.indiceImgCorrente = indiceProsImg;
+                }
+
+            },
+
+            precedenteImg() {
+
+                const indicePrecImg = this.indiceImgCorrente - 1;
+
+                if (indicePrecImg == -1) {
+                    this.indiceImgCorrente = this.arrayImmagini.length - 1;
+                } else {
+                    this.indiceImgCorrente = indicePrecImg;
+                }
+
+            }
         }
         
     }
