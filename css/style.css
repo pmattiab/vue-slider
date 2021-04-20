@@ -1,10 +1,11 @@
-/* COMMON */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* COMMON */
 body {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #444;

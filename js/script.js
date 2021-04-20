@@ -1,7 +1,10 @@
+// var per vue js
 var app = new Vue(
     {
+        // elemento con id root
         el: "#root",
 
+        // data
         data: {
             indiceImgCorrente: 0,
             arrayImmagini: [
@@ -12,6 +15,7 @@ var app = new Vue(
             ],
         },
 
+        // methods (funzioni)
         methods: {
 
             prossimaImg() {
@@ -37,6 +41,7 @@ var app = new Vue(
             }
         },
 
+        // funzioni da far partire al caricamento della pagina
         created() {
 
             setInterval(this.prossimaImg, 3000);

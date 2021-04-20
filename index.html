@@ -42,6 +42,8 @@
 
                     <!-- immagini dello slider -->
                     <div class="img_cont">
+                        
+                        <!-- l'immagine cambia in base all'indice dell'array immagini -->
                         <img :src="'img/' + arrayImmagini[indiceImgCorrente]" alt="">
                     </div>
 
@@ -55,7 +57,10 @@
 
                 <!-- cerchietti -->
                 <div class="cerchietti">
+                    <!-- v-for per stampare il numero dei cerchietti per quante sono le img -->
                     <span v-for="(immagine, index) in arrayImmagini" class="cerchietto">
+
+                        <!-- l'icona che ha classe attiva è solo quella che ha stesso indice della immagine corrente -->
                         <i class="fas fa-circle" :class="{'attivo': index == indiceImgCorrente}"></i>
                     </span>
                 </div>
