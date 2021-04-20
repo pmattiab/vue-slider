@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Slideshow</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+
+    <!-- INIZIO HEADER -->
+    <header>
+
+        <!-- inizio titolo -->
+        <div class="title">
+            <h1>Vue Slideshow</h1>
+        </div>
+        <!-- fine titolo -->
+
+    </header>
+    <!-- FINE HEADER -->
+    
+    <!-- INIZIO MAIN -->
+    <main>
+
+        <!-- inizio vue js #root -->
+        <div id="root">
+
+            <!-- inizio contenitore slider -->
+            <div class="slider_cont">
+
+                <!-- inizio carousel -->
+                <div class="carousel">
+
+                    <!-- freccia sinistra -->
+                    <div class="freccia sinistra">
+                        <i class="fas fa-arrow-circle-left"></i>
+                    </div>
+
+                    <!-- immagini dello slider -->
+                    <div class="img_cont">
+                        <img :src="immagini[imgCorrente]" alt="">
+                    </div>
+
+                    <!-- freccia destra -->
+                    <div class="freccia destra">
+                        <i class="fas fa-arrow-circle-right"></i>
+                    </div>
+
+                </div>
+                <!-- fine carousel -->
+
+                <!-- cerchietti -->
+                <div class="cerchietti">
+                    <span v-for="(immagine, index) in immagini" class="cerchietto">
+                        <i class="fas fa-circle" :class="{'attivo': index == imgCorrente}"></i>
+                    </span>
+                </div>
+
+            </div>
+            <!-- fine contenitore slider -->
+
+        </div>
+        <!-- fine vue js #root -->
+
+    </main>
+    <!-- FINE MAIN -->
+
+    <!-- INIZIO FOOTER -->
+    <footer>
+        <span><b>@pmattiab</b></span>
+        <img src="img/bool_logo.png" alt="boolean">
+        <span>slideshow with</span>
+        <img src="img/vue_logo.png" alt="vue">
+    </footer>
+    <!-- FINE FOOTER -->
+
+    <!-- JS -->
+    <script type="text/javascript" src="js/script.js"></script>   
+
+</body>
+</html>
