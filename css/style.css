@@ -97,6 +97,7 @@ h1 {
 .cerchietti i {
     color: white;
     margin: 0 7px;
+    cursor: pointer;
 }
 
 .cerchietti i.attivo {

@@ -38,6 +38,12 @@ var app = new Vue(
                 } else {
                     this.indiceImgCorrente = indicePrecImg;
                 }
+            },
+
+            selezionaImg(index) {
+
+                this.indiceImgCorrente = index;
+
             }
         },
 
@@ -46,7 +52,7 @@ var app = new Vue(
 
             setInterval(() => {
                 this.prossimaImg();
-            }, 3000);
+            }, 5000);
             
         }
     }

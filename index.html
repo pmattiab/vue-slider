@@ -61,7 +61,7 @@
                     <span v-for="(immagine, index) in arrayImmagini" class="cerchietto">
 
                         <!-- l'icona che ha classe attiva è solo quella che ha stesso indice della immagine corrente -->
-                        <i class="fas fa-circle" :class="{'attivo': index == indiceImgCorrente}"></i>
+                        <i class="fas fa-circle" :class="{'attivo': index == indiceImgCorrente}" @click="selezionaImg(index)"></i>
                     </span>
                 </div>
 
